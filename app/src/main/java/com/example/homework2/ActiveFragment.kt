@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import com.example.homework2.databinding.FragmentActiveBinding
@@ -38,7 +39,8 @@ class ActiveFragment : Fragment(R.layout.fragment_active) {
                 val bundle = Bundle().apply {
                     putString("text", text)
                 }
-                findNavController().navigate(R.id.messageFragment, bundle)
+                findNavController().navigate(resId = R.id.action_activeFragment_to_messageFragment,
+                    bundle)
             }
         }
 

@@ -9,7 +9,15 @@
         android:id="@+id/firstFragment"
         android:name="com.example.homework2.FirstFragment"
         android:label="fragment_first"
-        tools:layout="@layout/fragment_first" />
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_firstFragment_to_filmFragment"
+            app:destination="@id/filmFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
     <fragment
         android:id="@+id/secondFragment"
         android:name="com.example.homework2.SecondFragment"
@@ -33,14 +41,18 @@
         <action
             android:id="@+id/action_activeFragment_to_messageFragment"
             app:destination="@id/messageFragment"
-            app:enterAnim="@anim/slide_in_left"
-            app:exitAnim="@anim/slide_out_right"
-            app:popEnterAnim="@anim/slide_in_right"
-            app:popExitAnim="@anim/slide_out_left" />
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/messageFragment"
         android:name="com.example.homework2.MessageFragment"
         android:label="fragment_message"
         tools:layout="@layout/fragment_message" />
+    <fragment
+        android:id="@+id/filmFragment"
+        android:name="com.example.homework2.FilmFragment"
+        android:label="FilmFragment" />
 </navigation>
